@@ -101,8 +101,8 @@ function HomePageComponent() {
         </p>
         <ul>
           {links.map((index: Link) => (
-            <li key={index.id ? index.id : ""}>
-              <a href={index.link ? index.link : ""}>
+            <li key={index.id ? index.id : ""} className="api-links">
+              <a href={index.link ? index.link : ""} target="_blank">
                 {index.value ? index.value : ""}
               </a>
             </li>
