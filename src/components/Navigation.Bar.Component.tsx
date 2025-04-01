@@ -1,4 +1,6 @@
-function NavigationBar() {
+import React from "react";
+
+const NavigationBar:  React.FunctionComponent<any> = (): any => {
   return (
     <nav className="navigation-bar-component">
       <div className="wrapper">

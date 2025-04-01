@@ -1,17 +1,16 @@
-import { LuBraces } from "react-icons/lu";
+import React from "react";
 
-function HeaderComponent() {
+const HeaderComponent: React.FunctionComponent<any> = (): any => {
   return (
     <header className="header-component">
       <div className="wrapper">
         <h1>
-          Json Resources Api <LuBraces />
+        THE ULTIMATE FREE STARTER JSON API FOR YOUR PROJECT.
         </h1>
         <p>
-          This is a free online REST API that provides sampling json resources
-          interactivity in form of JSON objects to provide effective resource
-          sharing to all origins freely and handles all CRUD operations to help
-          you test out your projects with json data fetching.
+          Free json api to provide you with fake json data for free to be able to 
+          sample and test out your frontend and backend projects to handle fetching of
+          data from a complete secure live free hosted source.
         </p>
         <a
           href="https://api-jsonresources-restapi.onrender.com"

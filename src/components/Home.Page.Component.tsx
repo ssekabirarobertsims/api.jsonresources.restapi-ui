@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoCopy } from "react-icons/io5";
 import { v4 as uuid } from "uuid";
 
@@ -8,7 +8,7 @@ interface Link {
   link: string;
 }
 
-function HomePageComponent() {
+const HomePageComponent: React.FunctionComponent<any> = (): any => {
   const codes = useRef(
     `fetch('https://api-jsonresources-restapi.onrender.com/resources/users')`
   );
@@ -75,11 +75,14 @@ function HomePageComponent() {
         <button
           type="button"
           onClick={(event) => {
+            event.stopPropagation();
+
             (
               window.document.querySelector(".copy-message") as HTMLSpanElement
-            ).textContent = "codes copied!";
-            event.stopPropagation();
+            ).textContent = "codes copied to clipboard!";
+
             window.navigator.clipboard.writeText(codes.current as string);
+
             window.setTimeout(() => {
               (
                 window.document.querySelector(
@@ -125,6 +128,6 @@ function HomePageComponent() {
       </section>
     </main>
   );
-}
+};
 
 export default HomePageComponent;

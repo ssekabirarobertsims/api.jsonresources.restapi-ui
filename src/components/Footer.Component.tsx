@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoHeart } from "react-icons/io5";
 import { v4 as uuid } from "uuid";
 import { format } from "date-fns";
@@ -9,7 +9,7 @@ interface LinkType {
   value: string;
 }
 
-function FooterComponent() {
+const FooterComponent: React.FunctionComponent<any> = (): any => {
   const [links, setLinks] = useState([
     {
       id: uuid() as string,
@@ -18,7 +18,7 @@ function FooterComponent() {
     },
     {
       id: uuid() as string,
-      link: "https://github.com/stack-engineers/api.jsonresources.restapi-service",
+      link: "https://github.com/ssekabirarobertsims",
       value: "github",
     },
     {
@@ -55,7 +55,7 @@ function FooterComponent() {
         </ul>
       </div>
       <aside>
-        <p>&copy;right {date as string} all rights reserved</p>
+        <p>&copy;right 2024, {date as string} all rights reserved</p>
       </aside>
     </footer>
   );
