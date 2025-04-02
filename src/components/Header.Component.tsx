@@ -4,13 +4,11 @@ const HeaderComponent: React.FunctionComponent<any> = (): any => {
   return (
     <header className="header-component">
       <div className="wrapper">
-        <h1>
-        THE ULTIMATE FREE STARTER JSON API FOR YOUR PROJECT.
-        </h1>
+        <h1>THE ULTIMATE FREE STARTER JSON API FOR YOUR PROJECT.</h1>
         <p>
-          Free json api to provide you with fake json data for free to be able to 
-          sample and test out your frontend and backend projects to handle fetching of
-          data from a complete secure live free hosted source.
+          Free json api to provide you with fake json data for free to be able
+          to sample and test out your frontend and backend projects to handle
+          fetching of data from a complete secure live free hosted source.
         </p>
         <a
           href="https://api-jsonresources-restapi.onrender.com"
@@ -21,6 +19,6 @@ const HeaderComponent: React.FunctionComponent<any> = (): any => {
       </div>
     </header>
   );
-}
+};
 
 export default HeaderComponent;

@@ -2,9 +2,11 @@
     header div[class="wrapper"] :is(h1) {
         font-size: 2em;
     }
+
     header div[class="wrapper"] :is(p) {
         font-size: .9em;
     }
+
     header div[class="wrapper"] :is(a) {
         font-size: .8em;
     }
@@ -13,6 +15,7 @@
     main section :is(h1) {
         font-size: 1.4em;
     }
+
     main section :is(p) {
         font-size: .9em;
     }
@@ -23,7 +26,7 @@
     }
 
     /*  */
-    main section :is(ul) li > a {
+    main section :is(ul) li>a {
         font-size: .9em;
     }
 
