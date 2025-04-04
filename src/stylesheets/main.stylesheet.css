@@ -7,7 +7,8 @@
 
 :root {
     --primary-color: #0066ff;
-    --primary-font-family: "Liter", serif, sans-serif;
+    --primary-font-family: "Lilita One", sans-serif;
+    --primary-font-family-two: "Winky Sans", sans-serif;
 }
 
 body {
@@ -16,7 +17,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--primary-font-family-two);
     flex-direction: column;
+}
+
+h1, h2, h3 {
     font-family: var(--primary-font-family)
 }
 
