@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavigationBar:  React.FunctionComponent<any> = (): any => {
+const NavigationBar: React.FunctionComponent<any> = (): any => {
   return (
     <nav className="navigation-bar-component">
       <div className="wrapper">
@@ -8,6 +8,6 @@ const NavigationBar:  React.FunctionComponent<any> = (): any => {
       </div>
     </nav>
   );
-}
+};
 
 export default NavigationBar;

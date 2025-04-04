@@ -54,6 +54,7 @@ main {
 ::-webkit-scrollbar {
     width: .5em;
 }
+
 ::-webkit-scrollbar-thumb {
     width: .5em;
     background-color: hsl(0, 0%, 10%);
@@ -68,6 +69,7 @@ nav {
     justify-content: center;
     flex-flow: row wrap;
 }
+
 nav div[class="wrapper"] {
     min-height: 10vh;
     width: min(90%, 90%);
@@ -87,6 +89,7 @@ header {
     flex-flow: row wrap;
     border-bottom: 1px solid hsl(0, 0, 50%);
 }
+
 header div[class="wrapper"] {
     min-height: 90vh;
     width: min(90%, 90%);
@@ -97,22 +100,26 @@ header div[class="wrapper"] {
     text-align: center;
     gap: 1em;
 }
+
 header div[class="wrapper"] :is(h1) {
     font-size: 3em;
     font-weight: bold;
 }
+
 header div[class="wrapper"] :is(p) {
     font-size: 1em;
     font-weight: normal;
     color: hsl(0, 0, 10%);
     max-width: 60em;
 }
+
 header div[class="wrapper"] :is(a) {
     font-size: .9em;
     font-weight: normal;
     color: var(--primary-color);
     text-decoration-color: none;
 }
+
 header div[class="wrapper"] :is(img) {
     height: 25em;
     width: 45em;
@@ -129,14 +136,17 @@ main section {
     gap: 1em;
     /* border: 1px solid red; */
 }
+
 main section :is(h1) {
     font-size: 1.8em;
     font-weight: bold;
 }
+
 main section :is(p) {
     font-size: 1em;
     font-weight: normal;
 }
+
 main section :is(div[class="sample-cont"]) {
     height: 7em;
     width: min(90%, 60em);
@@ -151,6 +161,7 @@ main section :is(div[class="sample-cont"]) {
     color: #fff;
     text-wrap: wrap;
 }
+
 main section :is(button) {
     height: 3em;
     width: min(90%, 20em);
@@ -176,15 +187,19 @@ main section :is(ul) {
     list-style: none;
     max-width: 50em;
 }
-main section :is(ul) li > a {
+
+main section :is(ul) li>a {
     color: var(--primary-color);
 }
-main section :is(ul) li > a:where(:hover) {
+
+main section :is(ul) li>a:where(:hover) {
     color: #000;
 }
+
 .warning {
     max-width: 65em;
 }
+
 .copy-message {
     font-size: .8em;
     font-weight: normal;
@@ -205,6 +220,7 @@ aside[class="spinner-component"] {
     top: 0px;
     left: 0px;
 }
+
 aside[class="spinner-component"] div {
     height: 3em;
     width: 3em;
@@ -221,7 +237,9 @@ aside[class="spinner-component"] div {
 @keyframes spin {
     to {
         transform: rotate(360deg);
-    } from {
+    }
+
+    from {
         transform: rotate(0deg);
     }
 }
@@ -332,9 +350,10 @@ footer {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    border-top: 1px solid hsl(0, 0%, 90%); 
+    border-top: 1px solid hsl(0, 0%, 90%);
     gap: 0em;
 }
+
 footer div {
     min-height: 15vh;
     width: min(90%, 90%);
@@ -345,10 +364,12 @@ footer div {
     text-align: center;
     gap: .8em;
 }
+
 footer div p :where(a) {
     text-decoration-color: none;
     color: var(--primary-color);
 }
+
 footer div ul {
     display: flex;
     align-items: center;
@@ -359,11 +380,13 @@ footer div ul {
     list-style: none;
     text-decoration: none;
 }
-footer div ul > li :is(a) {
+
+footer div ul>li :is(a) {
     text-decoration: none;
     color: hsl(0, 0%, 10%);
     font-weight: normal;
 }
+
 footer aside {
     min-height: 5vh;
     width: min(90%, 90%);
@@ -374,6 +397,7 @@ footer aside {
     text-align: center;
     gap: .8em;
 }
+
 footer aside :is(p) {
     font-size: .8em;
     color: hsl(0, 0%, 10%);

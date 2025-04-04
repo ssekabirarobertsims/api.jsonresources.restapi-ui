@@ -59,6 +59,6 @@ const FooterComponent: React.FunctionComponent<any> = (): any => {
       </aside>
     </footer>
   );
-}
+};
 
 export default FooterComponent;
