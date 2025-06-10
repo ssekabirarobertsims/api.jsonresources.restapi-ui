@@ -9,22 +9,17 @@ interface LinkType {
   value: string;
 }
 
-const FooterComponent: React.FunctionComponent<any> = (): any => {
+const FooterComponent: React.FunctionComponent= () => {
   const [links, setLinks] = useState([
     {
       id: uuid() as string,
-      link: "https://robertsims.netlify.app",
+      link: "https://ssekabirarobertsims.netlify.app",
       value: "developer",
     },
     {
       id: uuid() as string,
-      link: "https://github.com/ssekabirarobertsims",
+      link: "https://github.com/ssekabirarobertsims/api.jsonresources.restapi-ui",
       value: "github",
-    },
-    {
-      id: uuid() as string,
-      link: "https://api-jsonresources-restapi.onrender.com/api/legal/information",
-      value: "about api",
     },
     {
       id: uuid() as string,
@@ -43,7 +38,7 @@ const FooterComponent: React.FunctionComponent<any> = (): any => {
     <footer className="footer-component">
       <div className="wrapper">
         <p>
-          Developed with <IoHeart /> by <a href={links[0].link}>robert sims</a>{" "}
+          Developed with <IoHeart /> by <a href={links[0].link}>ssekabira robert sims</a>{" "}
           software engineer
         </p>
         <ul>

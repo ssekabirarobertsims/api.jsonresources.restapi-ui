@@ -35,7 +35,7 @@
   "main": "eslint.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stack-engineers/api.jsonresources.restapi-ui.git"
+    "url": "git+https://github.com/ssekabirarobertsims/api.jsonresources.restapi-ui.git"
   },
   "keywords": [
     "restapi"
@@ -43,7 +43,7 @@
   "author": "ssekabira robert sims",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stack-engineers/api.jsonresources.restapi-ui/issues"
+    "url": "https://github.com/ssekabirarobertsims/api.jsonresources.restapi-ui/issues"
   },
-  "homepage": "https://github.com/stack-engineers/api.jsonresources.restapi-ui#readme"
+  "homepage": "https://github.com/ssekabirarobertsims/api.jsonresources.restapi-ui#readme"
 }

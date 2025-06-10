@@ -8,7 +8,7 @@ interface Link {
   link: string;
 }
 
-const HomePageComponent: React.FunctionComponent<any> = (): any => {
+const HomePageComponent: React.FunctionComponent = () => {
   const codes = useRef(
     `fetch('https://api-jsonresources-restapi.onrender.com/resources/users')`
   );
