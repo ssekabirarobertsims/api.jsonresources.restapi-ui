@@ -5,6 +5,7 @@ import HeaderComponent from "../components/Header.Component";
 import FooterComponent from "../components/Footer.Component";
 import CookiesWarningComponent from "../components/Cookies.Site.Message.Component";
 import SiteDeveloperNavigationComponent from "../components/Developer.Navigation.Div.Component";
+import OfflineElementsComponent from "../components/Offline.Component";
 
 const HomePage: React.FunctionComponent = () => {
     // Set the document title for the Not Found page
@@ -16,6 +17,7 @@ const HomePage: React.FunctionComponent = () => {
     <>
       <NavigationBar />
       <HeaderComponent />
+      <OfflineElementsComponent />
       <SiteDeveloperNavigationComponent />
       <CookiesWarningComponent />
       <HomePageComponent />

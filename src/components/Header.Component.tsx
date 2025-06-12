@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BsBraces } from "react-icons/bs";
 
 const HeaderComponent: React.FunctionComponent= () => {
   return (
     <header className="header-component">
       <div className="wrapper">
+        <h1><BsBraces /></h1>
         <h1>THE ULTIMATE FREE STARTER JSON API FOR YOUR DREAM PROJECT.</h1>
         <p>
           Free json api to provide you with fake json data for free to be able

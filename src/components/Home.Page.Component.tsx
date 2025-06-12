@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { IoCopy } from "react-icons/io5";
+import { BsCopy } from "react-icons/bs";
 import { v4 as uuid } from "uuid";
 
 interface Link {
@@ -9,9 +9,21 @@ interface Link {
 }
 
 const HomePageComponent: React.FunctionComponent = () => {
-  const codes = useRef(
-    `fetch('https://api-jsonresources-restapi.onrender.com/resources/users')`
+  const codes = useRef<string>(
+    `
+    (async function(){
+      const{data: response} = await axios.get("https://api-jsonresources-restapi.onrender.com/resources/users", {
+        headers: {
+          "Authorization": 'Bearer YOUR_SECRETE_API_TOKEN',
+          "Content-Type": "Application/json"
+        }
+      });
+  
+      console.log(response);
+    }());
+    `
   );
+
 
   const [links, setLinks] = useState([
     {
@@ -70,7 +82,7 @@ const HomePageComponent: React.FunctionComponent = () => {
         </p>
         <span className="copy-message"></span>
         <div className="sample-cont">
-          <span>{codes.current as string}</span>
+          <img src="/photos/codes.png" alt="codes_sample" />
         </div>
         <button
           type="button"
@@ -83,16 +95,14 @@ const HomePageComponent: React.FunctionComponent = () => {
 
             window.navigator.clipboard.writeText(codes.current as string);
 
-            window.setTimeout(() => {
-              (
+            window.setTimeout(() => (
                 window.document.querySelector(
                   ".copy-message"
                 ) as HTMLSpanElement
-              ).textContent = "";
-            }, 4000 as number);
+              ).textContent = "", 4000 as number);
           }}
         >
-          <IoCopy /> copy code
+          <BsCopy /> copy code
         </button>
       </section>
       <br />
