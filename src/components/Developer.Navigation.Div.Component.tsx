@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-const SiteDeveloperNavigationComponent: React.FC = () => {
+const SiteDeveloperNavigationComponent: React.FunctionComponent = () => {
   const photosRef = useRef(null);
   return (
     <>
@@ -11,8 +11,8 @@ const SiteDeveloperNavigationComponent: React.FC = () => {
         )}
       >
         <p>Need some little help!</p>
-        <a href="http://robertsims.netlify.app" target="_blank">
-          <img src="/photos/robertsims.jpg" alt="" ref={photosRef.current} />
+        <a href="http://ssekabirarobertsims.netlify.app" target="_blank">
+          <img src="/photos/ssekabirarobertsims-2.png" alt="" ref={photosRef} />
         </a>
       </div>
     </>

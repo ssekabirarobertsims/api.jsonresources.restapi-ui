@@ -1,3 +1,15 @@
+/*
+    Responsive styles for shared and reusable UI components across the app.
+    - Includes navigation bars, sidebars, notifications, utility components, and more.
+    - Ensures consistent layout, spacing, and theming for all major UI elements.
+    - Uses flexbox for alignment and responsiveness.
+    - Buttons, avatars, and links use theme colors and interactive states.
+    - Notification and message components are visually distinct and accessible.
+    - Utility classes and selectors are used for easy maintenance and scalability.
+    - Each section is commented for easier navigation and future updates.
+*/
+
+
 @media all and (min-width: 320px) and (max-width: 425px) {
     header div[class="wrapper"] :is(h1) {
         font-size: 2em;

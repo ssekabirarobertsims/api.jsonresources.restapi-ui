@@ -1,61 +1,76 @@
 import React, { useEffect, useRef, useState } from "react";
-import { IoCopy } from "react-icons/io5";
+import { BsCopy } from "react-icons/bs";
 import { v4 as uuid } from "uuid";
 
+// Define the type for API resource links
 interface Link {
   id: string;
   value: string;
   link: string;
-}
+} 
 
-const HomePageComponent: React.FunctionComponent<any> = (): any => {
-  const codes = useRef(
-    `fetch('https://api-jsonresources-restapi.onrender.com/resources/users')`
+const HomePageComponent: React.FunctionComponent = () => {
+  // Ref to hold the sample code snippet for copying
+  const codes = useRef<string>(
+    `
+    (async function(){
+      const{data: response} = await axios.get("https://api-jsonresources-restapi.onrender.com/resources/users", {
+        headers: {
+          "Authorization": 'Bearer YOUR_SECRETE_API_TOKEN',
+          "Content-Type": "Application/json"
+        }
+      });
+  
+      console.log(response);
+    }());
+    `
   );
 
+  // State to hold the list of API resource links
   const [links, setLinks] = useState([
     {
       id: uuid() as string,
       value: "/resources/texts",
-      link: "https://api-jsonresources-restapi.onrender.com/resources/texts",
+      link: `${import.meta.env.VITE_GET_TEXT_RESOURCES_API_POINT}`,
     },
     {
       id: uuid() as string,
       value: "/resources/texts/:id",
-      link: "https://api-jsonresources-restapi.onrender.com/resources/texts/242c59c1-dba4-4e1c-a2eb-056b12e8d32e",
+      link: `${import.meta.env.VITE_GET_SINGLE_TEXT_RESOURCES_API_POINT}`,
     },
     {
       id: uuid() as string,
       value: "/resources/users",
-      link: "https://api-jsonresources-restapi.onrender.com/resources/users",
+      link: `${import.meta.env.VITE_GET_USERS_RESOURCES_API_POINT}`,
     },
     {
       id: uuid() as string,
       value: "/resources/users/:id",
-      link: "https://api-jsonresources-restapi.onrender.com/resources/users/030f3d31-5209-482e-a391-ae669a1b7f04",
+      link: `${import.meta.env.VITE_GET_SINGLE_USERS_RESOURCES_API_POINT}`,
     },
     {
       id: uuid() as string,
       value: "/resources/photos",
-      link: "https://api-jsonresources-restapi.onrender.com/resources/photos",
+      link: `${import.meta.env.VITE_GET_PHOTOS_RESOURCES_API_POINT}`,
     },
     {
       id: uuid() as string,
       value: "/resources/photos/:id",
-      link: "https://api-jsonresources-restapi.onrender.com/resources/photos/fb633db6-e82e-4ccc-897b-ec3baw37899be",
+      link: `${import.meta.env.VITE_GET_SINGLE_PHOTOS_RESOURCES_API_POINT}`,
     },
     {
       id: uuid() as string,
       value: "/resources/posts",
-      link: "https://api-jsonresources-restapi.onrender.com/resources/posts",
+      link: `${import.meta.env.VITE_GET_POSTS_RESOURCES_API_POINT}`,
     },
     {
       id: uuid() as string,
       value: "/resources/posts/:id",
-      link: "https://api-jsonresources-restapi.onrender.com/resources/posts/fb633db6-e8e-4ccc-897b-ec3ba37899be",
+      link: `${import.meta.env.VITE_GET_SINGLE_POSTS_RESOURCES_API_POINT}`,
     },
   ] as Readonly<Link>[]);
 
+  // Effect to set links (redundant, as links never change)
   useEffect(() => {
     setLinks(links);
   }, [links]);
@@ -63,15 +78,19 @@ const HomePageComponent: React.FunctionComponent<any> = (): any => {
   return (
     <main className="home-page-component">
       <section>
+        {/* Section for trying out resource fetching */}
         <h1>Try to fetch some resources</h1>
         <p>
           Try to fetch some api users resources using this url resource provider
           to test the API.
         </p>
+        {/* Message shown when code is copied */}
         <span className="copy-message"></span>
+        {/* Sample code image */}
         <div className="sample-cont">
-          <span>{codes.current as string}</span>
+          <img src="/photos/codes.png" alt="codes_sample" />
         </div>
+        {/* Button to copy the sample code to clipboard */}
         <button
           type="button"
           onClick={(event) => {
@@ -83,20 +102,19 @@ const HomePageComponent: React.FunctionComponent<any> = (): any => {
 
             window.navigator.clipboard.writeText(codes.current as string);
 
-            window.setTimeout(() => {
-              (
+            window.setTimeout(() => (
                 window.document.querySelector(
                   ".copy-message"
                 ) as HTMLSpanElement
-              ).textContent = "";
-            }, 4000 as number);
+              ).textContent = "", 4000 as number);
           }}
         >
-          <IoCopy /> copy code
+          <BsCopy /> copy code
         </button>
       </section>
       <br />
       <section>
+        {/* Section listing API resources and routes */}
         <h1>API Resources & Routes</h1>
         <p>
           Checkout the following API resources to sample out your project and
@@ -113,6 +131,7 @@ const HomePageComponent: React.FunctionComponent<any> = (): any => {
         </ul>
         <br />
         <br />
+        {/* Warning section about API usage */}
         <h1>
           <strong>Warning!</strong>
         </h1>

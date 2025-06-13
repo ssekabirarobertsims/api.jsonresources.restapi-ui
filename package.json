@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^1.7.9",
     "date-fns": "^4.1.0",
+    "dotenv": "^16.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
@@ -35,7 +36,7 @@
   "main": "eslint.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stack-engineers/api.jsonresources.restapi-ui.git"
+    "url": "git+https://github.com/ssekabirarobertsims/api.jsonresources.restapi-ui.git"
   },
   "keywords": [
     "restapi"
@@ -43,7 +44,7 @@
   "author": "ssekabira robert sims",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stack-engineers/api.jsonresources.restapi-ui/issues"
+    "url": "https://github.com/ssekabirarobertsims/api.jsonresources.restapi-ui/issues"
   },
-  "homepage": "https://github.com/stack-engineers/api.jsonresources.restapi-ui#readme"
+  "homepage": "https://github.com/ssekabirarobertsims/api.jsonresources.restapi-ui#readme"
 }
