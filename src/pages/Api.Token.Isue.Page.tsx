@@ -6,6 +6,7 @@ import { BiNote } from "react-icons/bi";
 import OfflineElementsComponent from "../components/Offline.Component";
 import axios from "axios";
 import { BsCopy } from "react-icons/bs";
+import CookiesSiteMessageComponent from "../components/Cookies.Site.Message.Component";
 
 const ApiTokenIssuePage: React.FunctionComponent = () => {
     // State for username input
@@ -111,6 +112,7 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
                 </div>
             </section>
             {/* Footer at the bottom */}
+            <CookiesSiteMessageComponent />
             <FooterComponent />
         </>
     );

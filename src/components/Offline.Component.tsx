@@ -1,25 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../stylesheets/main.stylesheet.css";
 import { BiError } from "react-icons/bi";
 
 const OfflineElementsComponent: React.FunctionComponent = () => {
-  // Set the document title when the component mounts
-  React.useEffect(() => {
+  const [isOnline, setIsOnline] = useState<boolean>(navigator.onLine);
+
+  useEffect(() => {
     document.title = "State - Offline | jsonresources api";
+
+    const goOnline = () => setIsOnline(true);
+    const goOffline = () => setIsOnline(false);
+
+    window.addEventListener("online", goOnline);
+    window.addEventListener("offline", goOffline);
+
+    // Cleanup listeners on unmount
+    return () => {
+      window.removeEventListener("online", goOnline);
+      window.removeEventListener("offline", goOffline);
+    };
   }, []);
 
   return (
-    // Conditionally render the offline message if the user is offline
-    window.navigator.onLine ? "" :  <aside className="offline-elements-component">
-                    <div>
-                        <article>
-                            {/* Error icon and message */}
-                            <h1><BiError /></h1>
-                            <span>Opps something wrong happened!</span>
-                            <p>Seems like you have lost your connection to the internet.</p>
-                        </article>
-                    </div>
-                </aside>
+    <>
+      {!isOnline && (
+        <aside className="offline-elements-component">
+          <div>
+            <article>
+              <h1><BiError /></h1>
+              <span>Oops, something went wrong!</span>
+              <p>Seems like you have lost your connection to the internet.</p>
+            </article>
+          </div>
+        </aside>
+      )}
+    </>
   );
 };
 
