@@ -44,7 +44,7 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
  			}, {
  				headers: {
                      "Authorization": "",
-                     "Content-Type": ""
+                     "Content-Type": "Application/json"
                  }
              });
  
@@ -57,11 +57,16 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
  
  			// If the response status code is not 201, log the error
  			else {
- 				console.error("Error issuing token:", response?.message || "Unknown error");	
- 				return;
+                responseMessagePlaceholder.textContent = response?.message || "Unknown error occurred while issuing token.";
+                setShowTokenIssue(false);
+                console.error("Error issuing token:", response?.message || "Unknown error");	
+                return;
             }
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
+            // Handle any errors that occur during the request
+            responseMessagePlaceholder.textContent = error?.response?.message || "An error occurred while issuing the token.";
+            setShowTokenIssue(false);
                console.error("Error issuing token:", error?.response?.message || error);	
         }
 	}
