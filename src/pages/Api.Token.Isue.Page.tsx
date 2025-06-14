@@ -16,32 +16,54 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
     // State to control showing the token issue response
     const [showTokenIssue, setShowTokenIssue] = useState<boolean>(false);
     // State to store the issued token
-    const [token, setToken] = useState<string>("");
+    const [token, setToken] = useState<string>("token");
 
     // Effect to make post request to the API to issue new secret token (currently not functional)
     const handleSubmit = async () => {
-            const {data: response} = await axios.post(`${import.meta.env.VITE_API_SECRETE_TOKEN_ISSUE_API_ENDPOINT}`, {
-				username: username,
-				email: email
-			}, {
-				headers: {
-                    "Authorization": "",
-                    "Content-Type": ""
-                }
-            });
+        const responseMessagePlaceholder = document.querySelector(".token-issue-message") as HTMLSpanElement;
 
-            // check for conditions for the request response state
-            if(response?.status_code === 201) {
-				// If the response status code is 201, set the token and show the token issue response
-				setToken(response?.data?.token || "");
-                setShowTokenIssue(true);
+        try {
+            // Clear previous token and response message
+            setToken("");
+            responseMessagePlaceholder.textContent = "";
+            // Clear the show token issue state
+            setShowTokenIssue(false);
+            // Check if username and email are provided
+            if (!username || !email) {
+                console.error("Username and email are required to issue a token.");
+                responseMessagePlaceholder.textContent = "Username and email are required to issue a token.";
+                setShowTokenIssue(false);
+                return;
             }
-
-			// If the response status code is not 201, log the error
-			else {
-				console.error("Error issuing token:", response?.message || "Unknown error");	
-				return;
-			}
+            // Make a POST request to the API to issue a new secret token
+            // Note: The API endpoint and headers should be configured correctly in the environment variables
+            
+             const {data: response} = await axios.post(`${import.meta.env.VITE_API_SECRETE_TOKEN_ISSUE_API_ENDPOINT}`, {
+ 				username: username,
+ 				email: email
+ 			}, {
+ 				headers: {
+                     "Authorization": "",
+                     "Content-Type": ""
+                 }
+             });
+ 
+             // check for conditions for the request response state
+             if(response?.status_code === 201) {
+ 				// If the response status code is 201, set the token and show the token issue response
+ 				setToken(response?.data?.token || "");
+                setShowTokenIssue(true);
+             }
+ 
+ 			// If the response status code is not 201, log the error
+ 			else {
+ 				console.error("Error issuing token:", response?.message || "Unknown error");	
+ 				return;
+            }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } catch (error: any) {
+               console.error("Error issuing token:", error?.response?.message || error);	
+        }
 	}
 
     // Set the document title and a sample token when the component mounts
@@ -83,6 +105,8 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
                     <form action="" method="post" encType="multipart/form-data">
                         <article>
                             <span>Issue Api Secrete Token</span>
+                                <p className="token-issue-message"></p>
+
                             <input type="text" name="username" id="username"
                                 placeholder="username"
                                 aria-placeholder="username"

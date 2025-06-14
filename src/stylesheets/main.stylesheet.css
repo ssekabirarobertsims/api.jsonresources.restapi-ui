@@ -580,6 +580,12 @@ section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-
   background-color: #000;
   cursor: pointer;
 }
+.token-issue-message {
+    display: block;
+    font-size: .9em;
+    font-weight: normal;
+    color: hsl(0, 0%, 10%);
+}
 
 
 /*  */
