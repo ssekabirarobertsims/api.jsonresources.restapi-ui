@@ -8,10 +8,12 @@ const NavigationBar: React.FunctionComponent = () => {
     <nav className="navigation-bar-component">
       <div className="wrapper">
         {/* Link to the home page with branding and icon */}
-        <Link to={{
-          pathname: "/",
-          search: "page=home"
-        }}>
+        <Link
+          to={{
+            pathname: "/",
+            search: "page=home",
+          }}
+        >
           json resources api <BsBraces />
         </Link>
       </div>

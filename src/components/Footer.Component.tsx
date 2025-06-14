@@ -10,7 +10,7 @@ interface LinkType {
   value: string;
 }
 
-const FooterComponent: React.FunctionComponent= () => {
+const FooterComponent: React.FunctionComponent = () => {
   // Initialize footer links with developer, GitHub, and API URLs
   const [links, setLinks] = useState([
     {
@@ -43,11 +43,11 @@ const FooterComponent: React.FunctionComponent= () => {
       <div className="wrapper">
         {/* Developer credit with heart icon and link */}
         <p>
-          Developed with <IoHeart /> by <a href={links[0].link}>ssekabira robert sims</a>{" "}
-          software engineer
+          Developed with <IoHeart /> by{" "}
+          <a href={links[0].link}>ssekabira robert sims</a> software engineer
         </p>
         {/* Render list of footer links */}
-        <ul> 
+        <ul>
           {links.map((index: LinkType) => (
             <li key={index.id}>
               <a href={index.link}>{index.value}</a>

@@ -9,290 +9,293 @@
     - Each section is commented for easier navigation and future updates.
 */
 * {
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    box-sizing: border-box;
-    transition: all 300ms;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  box-sizing: border-box;
+  transition: all 300ms;
 }
 
 :root {
-    --primary-color: hsl(216, 100%, 30%);
-    --primary-font-family: "Lilita One", sans-serif;
-    --primary-font-family-two: "Winky Sans", sans-serif;
-    --primary-font-family-three: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+  --primary-color: hsl(216, 100%, 30%);
+  --primary-font-family: "Lilita One", sans-serif;
+  --primary-font-family-two: "Winky Sans", sans-serif;
+  --primary-font-family-three: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    width: min(100%, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--primary-font-family-three);
-    flex-direction: column;
+  min-height: 100vh;
+  width: min(100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--primary-font-family-three);
+  flex-direction: column;
 }
 
-h1, h2, h3 {
-    font-family: var(--primary-font-family-three)
+h1,
+h2,
+h3 {
+  font-family: var(--primary-font-family-three);
 }
 p {
-    color: hsl(0, 0%, 20%);
-    font-weight: normal;
+  color: hsl(0, 0%, 20%);
+  font-weight: normal;
 }
 
 main {
-    min-height: 100vh;
-    width: min(100%, 100%);
-    flex: 1 0 auto;
-    /* border: 1px solid red; */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    text-align: center;
-    gap: 2em;
+  min-height: 100vh;
+  width: min(100%, 100%);
+  flex: 1 0 auto;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  gap: 2em;
 }
 
 #root {
-    min-height: 100vh;
-    width: min(100%, 100%);
-    flex: 1 0 auto;
-    /* border: 1px solid red; */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    text-align: center;
-    gap: 2em;
+  min-height: 100vh;
+  width: min(100%, 100%);
+  flex: 1 0 auto;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  gap: 2em;
 }
 
 ::-webkit-scrollbar {
-    width: .5em;
+  width: 0.5em;
 }
 
 ::-webkit-scrollbar-thumb {
-    width: .5em;
-    background-color: hsl(0, 0%, 10%);
-    border-radius: 10em;
+  width: 0.5em;
+  background-color: hsl(0, 0%, 10%);
+  border-radius: 10em;
 }
 
 nav {
-    min-height: 10vh;
-    width: min(100%, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
-    /* border: 1px solid red */
-    border-bottom: 1px solid hsl(0, 0%, 80%);
+  min-height: 10vh;
+  width: min(100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  /* border: 1px solid red */
+  border-bottom: 1px solid hsl(0, 0%, 80%);
 }
 
 nav div[class="wrapper"] {
-    min-height: 9vh;
-    width: min(90%, 90%);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-flow: row wrap;
-    font-weight: bold;
+  min-height: 9vh;
+  width: min(90%, 90%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  font-weight: bold;
 }
 
 nav div[class="wrapper"] > a {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: .5em;
-    font-weight: bold;
-    text-decoration: none;
-    color: hsl(0, 0%, 10%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: hsl(0, 0%, 10%);
 }
 
 header {
-    min-height: 80vh;
-    width: min(100%, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
+  min-height: 80vh;
+  width: min(100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
 }
 
 header div[class="wrapper"] {
-    min-height: 70vh;
-    width: min(90%, 90%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-bottom: 1px solid hsl(0, 0, 20%);
-    text-align: center;
-    gap: 1em;
+  min-height: 70vh;
+  width: min(90%, 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid hsl(0, 0, 20%);
+  text-align: center;
+  gap: 1em;
 }
 
 header div[class="wrapper"] :is(h1) {
-    font-size: 3em;
-    font-weight: bold;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 header div[class="wrapper"] :is(p) {
-    font-size: 1em;
-    font-weight: normal;
-    color: hsl(0, 0, 10%);
-    max-width: 60em;
+  font-size: 1em;
+  font-weight: normal;
+  color: hsl(0, 0, 10%);
+  max-width: 60em;
 }
 
 header div[class="wrapper"] :is(a) {
-    min-height: 1em;
-    width: min(100%, 15em);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 1em;
+  width: min(100%, 15em);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header div[class="wrapper"] :is(a) > button {
-    height: 3em;
-    width: min(100%, 15em);
-    border: none;
-    color: #fff;
-    background-color: #000;
-    font-weight: normal;
-    border-radius: .3em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5em;
+  height: 3em;
+  width: min(100%, 15em);
+  border: none;
+  color: #fff;
+  background-color: #000;
+  font-weight: normal;
+  border-radius: 0.3em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
 }
 
 header div[class="wrapper"] :is(img) {
-    height: 25em;
-    width: 45em;
+  height: 25em;
+  width: 45em;
 }
 
 main section {
-    min-height: 40vh;
-    width: min(100%, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    text-align: center;
-    gap: 1em;
-    /* border: 1px solid red; */
+  min-height: 40vh;
+  width: min(100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  gap: 1em;
+  /* border: 1px solid red; */
 }
 
 main section :is(h1) {
-    font-size: 1.8em;
-    font-weight: bold;
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 main section :is(p) {
-    font-size: 1em;
-    font-weight: normal;
+  font-size: 1em;
+  font-weight: normal;
 }
 
 main section :is(div[class="sample-cont"]) {
-    height: 15em;
-    width: min(90%, 60em);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    border-radius: .5em;
-    background-color: hsl(0, 0%, 10%);
-    border: 1px solid hsl(0, 0%, 90%);
-    color: #fff;
-    text-wrap: wrap;
-    overflow: hidden;
+  height: 15em;
+  width: min(90%, 60em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0.5em;
+  background-color: hsl(0, 0%, 10%);
+  border: 1px solid hsl(0, 0%, 90%);
+  color: #fff;
+  text-wrap: wrap;
+  overflow: hidden;
 }
 main section :is(div[class="sample-cont"]) > img {
-    height: 15em;
-    width: min(100%, 100%);
+  height: 15em;
+  width: min(100%, 100%);
 }
 
 main section :is(button) {
-    height: 3em;
-    width: min(100%, 15em);
-    border-radius: .3em;
-    background-color: #000;
-    border: none;
-    color: #fff;
-    cursor: pointer;
+  height: 3em;
+  width: min(100%, 15em);
+  border-radius: 0.3em;
+  background-color: #000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
 
 button:active {
-    transform: scale(.9)
+  transform: scale(0.9);
 }
 
 main section :is(ul) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-align: center;
-    flex-flow: row wrap;
-    gap: 2em;
-    list-style: none;
-    max-width: 50em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  flex-flow: row wrap;
+  gap: 2em;
+  list-style: none;
+  max-width: 50em;
 }
 
-main section :is(ul) li>a {
-    color: var(--primary-color);
+main section :is(ul) li > a {
+  color: var(--primary-color);
 }
 
-main section :is(ul) li>a:where(:hover) {
-    color: #000;
+main section :is(ul) li > a:where(:hover) {
+  color: #000;
 }
 
 .warning {
-    max-width: 65em;
+  max-width: 65em;
 }
 
 .copy-message {
-    font-size: .8em;
-    font-weight: normal;
-    color: rgb(0, 235, 0);
+  font-size: 0.8em;
+  font-weight: normal;
+  color: rgb(0, 235, 0);
 }
 
 /*  */
 aside[class="spinner-component"] {
-    height: 100vh;
-    width: min(100%, 100%);
-    background-color: rgba(0, 0, 0, .7);
-    color: #fff;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: fixed;
-    top: 0px;
-    left: 0px;
+  height: 100vh;
+  width: min(100%, 100%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
 
 aside[class="spinner-component"] div {
-    height: 3em;
-    width: 3em;
-    border-radius: 100%;
-    border: 4px solid #fff;
-    border-top: none;
-    border-left: none;
-    animation-name: spin;
-    animation-timing-function: linear;
-    animation-duration: 1000ms;
-    animation-iteration-count: infinite;
+  height: 3em;
+  width: 3em;
+  border-radius: 100%;
+  border: 4px solid #fff;
+  border-top: none;
+  border-left: none;
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
 }
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 }
-
 
 /*  */
 aside[class="cookies-site-message-component"] {
@@ -308,7 +311,7 @@ aside[class="cookies-site-message-component"] {
   -webkit-box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.2);
   box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.2);
   position: fixed;
-  left: .5em;
+  left: 0.5em;
   bottom: 1em;
   z-index: 2;
 }
@@ -350,31 +353,30 @@ aside[class="cookies-site-message-component"] > div :is(button) {
   color: #fff;
 } */
 
-
 /*  */
 .site-developer-navigation-component {
-    height: 4em;
-    width: 15em;
-    position: fixed;
-    bottom: 2em;
-    right: 0em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    z-index: 3;
+  height: 4em;
+  width: 15em;
+  position: fixed;
+  bottom: 2em;
+  right: 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  z-index: 3;
 }
 
-.site-developer-navigation-component>p {
-    font-size: .9em;
-    color: #000;
-    font-weight: normal;
+.site-developer-navigation-component > p {
+  font-size: 0.9em;
+  color: #000;
+  font-weight: normal;
 }
 
-.site-developer-navigation-component>a :where(img) {
-    height: 3em;
-    width: 3em;
-    border-radius: 100%;
+.site-developer-navigation-component > a :where(img) {
+  height: 3em;
+  width: 3em;
+  border-radius: 100%;
 }
 
 /*  */
@@ -385,7 +387,7 @@ aside[class="cookies-site-message-component"] > div :is(button) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f3f4f6;
+  background-color: #fff;
   /* border: 1px solid red; */
 }
 
@@ -407,22 +409,23 @@ aside[class="cookies-site-message-component"] > div :is(button) {
 }
 
 .not-found-page-prime-message {
-  color: #4b5563;
-  font-size: 1.5rem;
-  font-weight: normal;
+  color: hsl(0, 0%, 15%);
+  font-size: 2em;
+  font-weight: calc(290 + 250);
 }
 
 .not-found-page-message {
   color: #4b5563;
-  font-size: .9em;
+  font-size: 0.9em;
   max-width: 50em;
 }
 
 .not-found-page-link {
   color: var(--primary-theme-color);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: normal;
   transition: text-decoration 0.2s;
+  font-size: 0.9em;
 }
 
 .not-found-page-link:hover,
@@ -432,94 +435,139 @@ aside[class="cookies-site-message-component"] > div :is(button) {
 
 /*  */
 section[class="api-token-issue-page"] {
-    min-height: 80vh;
-    width: min(100%, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* border: 1px solid red; */
+  min-height: 80vh;
+  width: min(100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid red; */
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] {
-    min-height: 70vh;
-    width: min(95%, 95%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* border: 1px solid red; */
-   position: relative; 
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"] {
+  min-height: 70vh;
+  width: min(95%, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  position: relative;
 }
 
 /*  */
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(article[class="api-token-issue-successful-response-wrapper"]) {
-    height: 100%;
-    width: min(100%, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: .5em;
-    position: absolute;
-    top: 0em;
-    left: 0em;
-    background-color: #fff;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(article[class="api-token-issue-successful-response-wrapper"]) {
+  height: 100%;
+  width: min(100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.5em;
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  background-color: #fff;
+  z-index: 10;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(article[class="api-token-issue-successful-response-wrapper"]) > div {
-    height: 20em;
-    width: min(95%, 30em);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: .5em;
-    border: 1px solid hsl(0, 0%, 60%);
-    border-radius: .5em;
-    background-color: #fff;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(article[class="api-token-issue-successful-response-wrapper"])
+  > div {
+  height: 20em;
+  width: min(95%, 30em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.5em;
+  border: 1px solid hsl(0, 0%, 60%);
+  border-radius: 0.5em;
+  background-color: #fff;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(article[class="api-token-issue-successful-response-wrapper"]) > div :is(aside) {
-    height: 18em;
-    width: min(90%, 90%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* border: 1px solid red;  */
-    gap: .5em;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(article[class="api-token-issue-successful-response-wrapper"])
+  > div
+  :is(aside) {
+  height: 18em;
+  width: min(90%, 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid red;  */
+  gap: 0.5em;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(article[class="api-token-issue-successful-response-wrapper"]) > div :is(aside) > h2 {
-    font-weight: calc(290 + 250);
-    color: hsl(0, 0%, 10%);
-    font-size: 1.2em;
-    line-height: 2em;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(article[class="api-token-issue-successful-response-wrapper"])
+  > div
+  :is(aside)
+  > h2 {
+  font-weight: calc(290 + 250);
+  color: hsl(0, 0%, 10%);
+  font-size: 1.2em;
+  line-height: 2em;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(article[class="api-token-issue-successful-response-wrapper"]) > div :is(aside) > p {
-    font-weight: normal;
-    color: hsl(0, 0%, 10%);
-    font-size: .9em;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(article[class="api-token-issue-successful-response-wrapper"])
+  > div
+  :is(aside)
+  > p {
+  font-weight: normal;
+  color: hsl(0, 0%, 10%);
+  font-size: 0.9em;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(article[class="api-token-issue-successful-response-wrapper"]) > div :is(aside) > span {
-    font-weight: calc(290 + 250);
-    color: hsl(0, 0%, 10%);
-    font-size: .9em;
-    line-height: 2em;
-    width: min(100%, 100%);
-    overflow: hidden;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(article[class="api-token-issue-successful-response-wrapper"])
+  > div
+  :is(aside)
+  > span {
+  font-weight: calc(290 + 250);
+  color: hsl(0, 0%, 10%);
+  font-size: 0.9em;
+  line-height: 2em;
+  width: min(100%, 100%);
+  overflow: hidden;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(article[class="api-token-issue-successful-response-wrapper"]) > div :is(aside) > textarea {
-    min-height: 1em;
-    width: 100%;
-    border: none; 
-      display: flex;
-    align-items: center;
-    justify-content: center;
-    outline-style: none;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(article[class="api-token-issue-successful-response-wrapper"])
+  > div
+  :is(aside)
+  > textarea {
+  min-height: 1em;
+  max-height: 1em;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline-style: none;
+  background-color: transparent;
+  max-width: 100%;
+  min-width: 100%;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(article[class="api-token-issue-successful-response-wrapper"]) > div :is(aside) > textarea::-webkit-scrollbar {
-    display: none;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(article[class="api-token-issue-successful-response-wrapper"])
+  > div
+  :is(aside)
+  > textarea::-webkit-scrollbar {
+  display: none;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(article[class="api-token-issue-successful-response-wrapper"]) > div :is(aside) > button {
-      height: 3em;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(article[class="api-token-issue-successful-response-wrapper"])
+  > div
+  :is(aside)
+  > button {
+  height: 3em;
   width: min(100%, 15em);
   border: none;
   border-radius: 0.3em;
@@ -527,116 +575,151 @@ section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-
   background-color: #000;
   cursor: pointer;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(form) {
-    min-height: 20em;
-    width: min(95%, 30em);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid hsl(0, 0%, 60%);
-    border-radius: .5em;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(form) {
+  min-height: 20em;
+  width: min(95%, 30em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid hsl(0, 0%, 60%);
+  border-radius: 0.5em;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(form) > article {
-    min-height: 18em;
-    width: min(90%, 90%);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: .5em;
-    /* border: 1px solid red; */
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(form)
+  > article {
+  min-height: 18em;
+  width: min(90%, 90%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5em;
+  /* border: 1px solid red; */
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(form) > article :where(span) {
-    font-weight: calc(290 + 250);
-    color: hsl(0, 0%, 10%);
-    font-size: 1.2em;
-    line-height: 2em;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(form)
+  > article
+  :where(span) {
+  font-weight: calc(290 + 250);
+  color: hsl(0, 0%, 10%);
+  font-size: 1.2em;
+  line-height: 2em;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(form) > article :where(p) {
-    font-weight: normal;
-    color: hsl(0, 0%, 10%);
-    font-size: .9em;
-    line-height: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5em;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(form)
+  > article
+  :where(p) {
+  font-weight: normal;
+  color: hsl(0, 0%, 10%);
+  font-size: 0.9em;
+  line-height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  text-align: left;
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(form) > article :where(input) {
-    height: 3em;
-    width: min(100%, 100%);
-    border: 1px solid hsl(0, 0%, 60%);
-    border-radius: .3em;
-    outline-style: none;
-    padding: 10px;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(form)
+  > article
+  :where(p[class="token-issue-message"]) {
+  font-size: 0.8em;
+  font-weight: normal;
+  color: hsl(0, 100%, 50%);
 }
-section[class="api-token-issue-page"] > div[class="api-token-issue-page-content-wrapper"] :is(form) > article :where(button) {
-     height: 3em;
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(form)
+  > article
+  :where(input) {
+  height: 3em;
+  width: min(100%, 100%);
+  border: 1px solid hsl(0, 0%, 60%);
+  border-radius: 0.3em;
+  outline-style: none;
+  padding: 10px;
+}
+section[class="api-token-issue-page"]
+  > div[class="api-token-issue-page-content-wrapper"]
+  :is(form)
+  > article
+  :where(button) {
+  height: 3em;
   width: min(100%, 10em);
   border: none;
   border-radius: 0.3em;
   color: #fff;
   background-color: #000;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
-.token-issue-message {
-    display: block;
-    font-size: .9em;
-    font-weight: normal;
-    color: hsl(0, 0%, 10%);
-}
-
 
 /*  */
 aside[class="offline-elements-component"] {
-    height: 100%;
-    width: min(100%, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: fixed;
-    top: 0em;
-    left: 0em;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 5;
+  height: 100%;
+  width: min(100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
 }
 aside[class="offline-elements-component"] > div {
-    height: 12em;
-    width: min(90%, 35em);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: .5em;
-    background-color: #fff;
+  height: 15em;
+  width: min(90%, 35em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.5em;
+  background-color: #fff;
 }
 aside[class="offline-elements-component"] > div :where(article) {
-    height: 10em;
-    width: min(95%, 95%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #fff;
+  height: 12em;
+  width: min(95%, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
 }
 aside[class="offline-elements-component"] > div :where(article) > h1 {
-    font-weight: calc(290 + 250);
-    color: hsl(0, 0%, 10%);
-    font-size: 3em;
-    line-height: 0em;
+  font-weight: calc(290 + 250);
+  color: hsl(0, 0%, 10%);
+  font-size: 3em;
+  line-height: 0em;
 }
 aside[class="offline-elements-component"] > div :where(article) > span {
-    font-weight: calc(290 + 250);
-    color: hsl(0, 0%, 10%);
-    font-size: 1.2em;
-    line-height: 2em;
+  font-weight: calc(290 + 250);
+  color: hsl(0, 0%, 10%);
+  font-size: 1.2em;
+  line-height: 2em;
 }
 aside[class="offline-elements-component"] > div :where(article) > p {
-     font-weight: normal;
-    color: hsl(0, 0%, 10%);
-    font-size: .9em;
+  font-weight: normal;
+  color: hsl(0, 0%, 10%);
+  font-size: 0.9em;
+}
+aside[class="offline-elements-component"] > div :where(article) :is(button) {
+  height: 2.5em;
+  width: min(100%, 10em);
+  border: none;
+  border-radius: 0.3em;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
 }
 article[class="offline-elements-component"] {
   height: 4.5em;
@@ -651,8 +734,8 @@ article[class="offline-elements-component"] {
   bottom: 2em;
   left: 1em;
   z-index: 1;
-  border-radius: .5em;
-    -mox-box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  -mox-box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.2);
   box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.2);
 }
@@ -674,78 +757,230 @@ article[class="offline-elements-component"] > div :is(span) {
   cursor: pointer;
 }
 article[class="offline-elements-component"] > div :is(p) {
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: calc(250 + 250);
   color: #fff;
 }
 
+/* loader also */
+.page-loader {
+  width: 40px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background: linear-gradient(
+        0deg,
+        rgb(0 0 0/50%) 30%,
+        #0000 0 70%,
+        rgb(0 0 0/100%) 0
+      )
+      50%/8% 100%,
+    linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0)
+      50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+.page-loader::before,
+.page-loader::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+.page-loader::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spinner-xp626r {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*  */
+.primary-spinner-wrapper {
+  min-height: 100%;
+  width: min(100%, 100%);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #000;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* components content spinner */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 19px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
+}
+@keyframes l20-1 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+  12.5% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%
+    );
+  }
+  25% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      100% 100%,
+      100% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  62.5% {
+    clip-path: polygon(
+      50% 50%,
+      100% 0,
+      100% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  75% {
+    clip-path: polygon(
+      50% 50%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+}
+@keyframes l20-2 {
+  0% {
+    transform: scaleY(1) rotate(0deg);
+  }
+  49.99% {
+    transform: scaleY(1) rotate(135deg);
+  }
+  50% {
+    transform: scaleY(-1) rotate(0deg);
+  }
+  100% {
+    transform: scaleY(-1) rotate(-135deg);
+  }
+}
+
 /*  */
 footer {
-    min-height: 30vh;
-    width: min(100%, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    text-align: center;
-    /* border: 1px solid hsl(0, 100%, 48%); */
-    gap: 0em;
-    background-color: #000;
+  min-height: 30vh;
+  width: min(100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
+  /* border: 1px solid hsl(0, 100%, 48%); */
+  gap: 0em;
+  background-color: #000;
 }
 
 footer div {
-    min-height: 15vh;
-    width: min(90%, 90%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    /* border: 1px solid red; */
-    gap: .5em;
+  min-height: 15vh;
+  width: min(90%, 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  /* border: 1px solid red; */
+  gap: 0.5em;
 }
 
 footer div p {
-    color: hsl(0, 0%, 95%);
-    font-size: .9em;
+  color: hsl(0, 0%, 95%);
+  font-size: 0.9em;
 }
 footer div p :where(a) {
-    text-decoration-color: none;
-    color: var(--primary-color);
+  text-decoration-color: none;
+  color: var(--primary-color);
 }
 
 footer div ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-align: center;
-    gap: 1em;
-    list-style: none;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  gap: 1em;
+  list-style: none;
+  text-decoration: none;
 }
 
-footer div ul>li :is(a) {
-    text-decoration: none;
-    color: hsl(0, 0%, 95%);
-    font-weight: normal;
-    font-size: .9em;
+footer div ul > li :is(a) {
+  text-decoration: none;
+  color: hsl(0, 0%, 95%);
+  font-weight: normal;
+  font-size: 0.9em;
 }
 
 footer aside {
-    min-height: 7vh;
-    width: min(90%, 90%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-align: center;
-    gap: .8em;
-    /* border: 1px solid red; */
+  min-height: 7vh;
+  width: min(90%, 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  gap: 0.8em;
+  /* border: 1px solid red; */
 }
 
 footer aside :is(p) {
-    font-size: .7em;
-    color: hsl(0, 0%, 85%);
-    font-weight: normal;
+  font-size: 0.7em;
+  color: hsl(0, 0%, 85%);
+  font-weight: normal;
 }

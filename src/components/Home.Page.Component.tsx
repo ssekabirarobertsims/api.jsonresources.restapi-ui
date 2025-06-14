@@ -7,7 +7,7 @@ interface Link {
   id: string;
   value: string;
   link: string;
-} 
+}
 
 const HomePageComponent: React.FunctionComponent = () => {
   // Ref to hold the sample code snippet for copying
@@ -102,11 +102,15 @@ const HomePageComponent: React.FunctionComponent = () => {
 
             window.navigator.clipboard.writeText(codes.current as string);
 
-            window.setTimeout(() => (
-                window.document.querySelector(
-                  ".copy-message"
-                ) as HTMLSpanElement
-              ).textContent = "", 4000 as number);
+            window.setTimeout(
+              () =>
+                ((
+                  window.document.querySelector(
+                    ".copy-message"
+                  ) as HTMLSpanElement
+                ).textContent = ""),
+              4000 as number
+            );
           }}
         >
           <BsCopy /> copy code

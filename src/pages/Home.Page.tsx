@@ -8,10 +8,10 @@ import SiteDeveloperNavigationComponent from "../components/Developer.Navigation
 import OfflineElementsComponent from "../components/Offline.Component";
 
 const HomePage: React.FunctionComponent = () => {
-    // Set the document title for the Home page when the component mounts
-    useEffect(() => {
-      document.title = "jsonresources-api | Home - Main Page";
-    }, []);
+  // Set the document title for the Home page when the component mounts
+  useEffect(() => {
+    document.title = "jsonresources-api | Home - Main Page";
+  }, []);
 
   return (
     <>
@@ -32,6 +32,6 @@ const HomePage: React.FunctionComponent = () => {
       <FooterComponent />
     </>
   );
-}
+};
 
 export default HomePage;

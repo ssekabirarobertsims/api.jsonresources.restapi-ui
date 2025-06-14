@@ -24,15 +24,38 @@ const OfflineElementsComponent: React.FunctionComponent = () => {
   return (
     <>
       {!isOnline && (
-        <aside className="offline-elements-component">
-          <div>
-            <article>
-              <h1><BiError /></h1>
-              <span>Oops, something went wrong!</span>
-              <p>Seems like you have lost your connection to the internet.</p>
-            </article>
-          </div>
-        </aside>
+        <>
+          <aside
+            className="offline-elements-component"
+            onClick={(event) => {
+              event.stopPropagation();
+              (event.target as HTMLElement).style.display = "none";
+            }}
+          >
+            <div
+              onClick={(event) => {
+                event.stopPropagation();
+              }}
+            >
+              <article>
+                <h1>
+                  <BiError />
+                </h1>
+                <span>Oops, something went wrong!</span>
+                <p>Seems like you have lost your connection to the internet.</p>
+                <br />
+                <button
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    window.location.reload();
+                  }}
+                >
+                  reload
+                </button>
+              </article>
+            </div>
+          </aside>
+        </>
       )}
     </>
   );

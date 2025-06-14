@@ -6,8 +6,9 @@ const CookiesSiteMessageComponent: React.FunctionComponent = () => {
     <aside className="cookies-site-message-component">
       <div>
         <p>
-          This site uses cookies. By continuing to use this site, you agree
-          to their use in your browser and operation to enhance performance while using this site!
+          This site uses cookies. By continuing to use this site, you agree to
+          their use in your browser and operation to enhance performance while
+          using this site!
         </p>
         <button
           type="button"
