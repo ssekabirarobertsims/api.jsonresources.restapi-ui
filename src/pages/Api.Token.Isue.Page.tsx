@@ -12,19 +12,18 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
   // State for username input
   const [username, setUsername] = useState<string>("");
   // State for email input
-  const [email, setEmail] = useState<string>("");
+  const [email, setEmail] = useState<string>();
   // State to control showing the token issue response
   const [showTokenIssue, setShowTokenIssue] = useState<boolean>(false);
   // State to control showing the loader
   const [showLoader, setShowLoader] = useState<boolean>(false);
   // State to store the issued token
   const [token, setToken] = useState<string>("token");
+  // state to handle the response messages for token issuing
+  const [responseMessage, setResponseMessage] = useState<string>("");
 
   // Effect to make post request to the API to issue new secret token (currently not functional)
   const handleSubmit = async () => {
-    const responseMessagePlaceholder = document.querySelector(
-      ".token-issue-message"
-    ) as HTMLSpanElement;
     setShowLoader(true);
 
     // hide the loader after a certain period of time
@@ -39,8 +38,9 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
       if (!username || !email) {
         window.setTimeout(() => {
           console.error("Username and email are required to issue a token.");
-          responseMessagePlaceholder.textContent =
-            "Username and email are required to issue a token.";
+          setResponseMessage(
+            String("Username and email are required to issue a token")
+          );
           setShowTokenIssue(false);
           return;
         }, 5000);
@@ -72,8 +72,11 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
       // If the response status code is not 201, log the error
       else {
         window.setTimeout(() => {
-          responseMessagePlaceholder.textContent =
-            response?.message || "Unknown error occurred while issuing token.";
+          setResponseMessage(
+            String(
+              response?.message ?? "Unknown error occurred while issuing token."
+            )
+          );
           setShowTokenIssue(false);
           console.error(
             "Error issuing token:",
@@ -86,9 +89,12 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
     } catch (error: any) {
       // Handle any errors that occur during the request
       window.setTimeout(() => {
-        responseMessagePlaceholder.textContent =
-          error?.response?.message ||
-          "An error occurred while issuing the token.";
+        setResponseMessage(
+          String(
+            error?.response?.message ??
+              "An error occurred while issuing the token."
+          )
+        );
         setShowTokenIssue(false);
         console.error(
           "Error issuing token:",
@@ -119,7 +125,8 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
                   <h2>Api secrete token issue</h2>
                   <p>
                     Successfully issued jsonresources api secrete token using
-                    your email <strong>{email}</strong> valid for only 10 days.
+                    your email <strong>({email ?? "example@gmail.com"})</strong>{" "}
+                    valid for only 10 days.
                   </p>
                   <textarea
                     name="token"
@@ -149,7 +156,7 @@ const ApiTokenIssuePage: React.FunctionComponent = () => {
           <form action="" method="post" encType="multipart/form-data">
             <article>
               <span>Issue Api Secrete Token</span>
-              <p className="token-issue-message"></p>
+              <p className="token-issue-message">{responseMessage as string}</p>
 
               <input
                 type="text"
