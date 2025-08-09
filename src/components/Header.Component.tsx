@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BsBraces } from "react-icons/bs";
 
+// check for the cookies status
+const cookiesAccepted: boolean = window.document.cookie.includes(
+  "cookiesAccepted"
+) as boolean;
+
 // Header component for the application
 const HeaderComponent: React.FunctionComponent = () => {
   return (
@@ -23,7 +28,7 @@ const HeaderComponent: React.FunctionComponent = () => {
         <Link
           to={{
             pathname: "/api/token/issue",
-            search: "",
+            search: `page=token-issue&query=issue-token&cookies-accepted=${cookiesAccepted}`,
           }}
         >
           <button type="button">Get token</button>
